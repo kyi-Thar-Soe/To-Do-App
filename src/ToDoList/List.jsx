@@ -1,4 +1,4 @@
-import { useContext, useReducer} from "react";
+import { useContext, useReducer, useEffect} from "react";
 import { Context } from "../Context/Context/UseContext";
 import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
@@ -32,12 +32,14 @@ export default function List() {
     };
     const handleSave  = async (item) => {
        const url = 'http://localhost:3000/checklist';
+       const tempDate = new Date();
        const postData = {
         note : item?.name,
+        date : ` ${tempDate.getFullYear()} / ${tempDate.getMonth()+1} / ${tempDate.getDate()} `
        };
        await ApiCall(url, 'post', postData);
     };
-
+ 
     return(
         <div className="list--div">
                 {list.map((item,index) => {

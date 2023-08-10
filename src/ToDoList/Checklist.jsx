@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {Card,CardBody,CardText} from 'reactstrap';
+import {Card,CardBody,CardHeader,CardText} from 'reactstrap';
 import { ApiCall } from "../ApiService/ApiCall";
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
 const url = "http://localhost:3000/checklist";
 export default function Checklist() {
@@ -29,9 +30,14 @@ export default function Checklist() {
         <div className="d-flex flex-column justify-content-center align-items-center">
         {data?.map((item,index) => {
             return (
-            <Card className="my-2" color="gray" outline style={{width: '18rem', height: "60px" , paddingTop: "0px", background: "rgb(218, 225, 223)"}} key={index}>
+            <Card className="my-2" color="gray" outline style={{width: '18rem' , padding: "0px", background: "rgb(218, 225, 223)"}} key={index}>
+              <CardHeader className="d-flex justify-content-center align-items-center gap-2">
+                <CalendarMonthOutlinedIcon/>
+                {item?.date}
+                <CalendarMonthOutlinedIcon/>
+              </CardHeader>
               <CardBody>
-                <div className="d-flex">
+                <div className="d-flex mt-2">
                 <CardText className="w-75">
                   <span className="d-flex justify-content-start ms-2">{item?.note}</span>
                 </CardText>

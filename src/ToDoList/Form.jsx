@@ -35,11 +35,6 @@ export default function Form() {
         setInputValue("");
    };
 
-   useEffect(() => {
-    // Save list to local storage whenever the list array changes
-    localStorage.setItem('list', JSON.stringify(list));
-  }, [list]);
-
     return(
         <>
         <div className="d-flex gap-2 justify-content-center align-content-center">
