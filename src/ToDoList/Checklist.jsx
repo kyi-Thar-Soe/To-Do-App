@@ -33,7 +33,7 @@ export default function Checklist() {
             <Card className="my-2" color="gray" outline style={{width: '18rem' , padding: "0px", background: "rgb(218, 225, 223)"}} key={index}>
               <CardHeader className="d-flex justify-content-center align-items-center gap-2">
                 <CalendarMonthOutlinedIcon/>
-                {item?.date}
+                <span className="fw-bolder">{item?.date}</span>
                 <CalendarMonthOutlinedIcon/>
               </CardHeader>
               <CardBody>
