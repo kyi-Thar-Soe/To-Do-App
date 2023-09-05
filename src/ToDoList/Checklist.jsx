@@ -5,7 +5,7 @@ import { ApiCall } from "../ApiService/ApiCall";
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
-const url = "http://localhost:3000/checklist";
+const url = "https://todo-app-database-scj7.onrender.com/";
 export default function Checklist() {
     const [data,setData] = useState(null);
     const navigate = useNavigate();
