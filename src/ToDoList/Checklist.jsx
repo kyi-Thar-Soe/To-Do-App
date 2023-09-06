@@ -5,7 +5,7 @@ import { ApiCall } from "../ApiService/ApiCall";
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
-const url = "https://note-database.onrender.com/";
+const url = "https://note-database.onrender.com/checklist";
 export default function Checklist() {
     const [data,setData] = useState(null);
     const navigate = useNavigate();

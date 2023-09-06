@@ -31,7 +31,7 @@ export default function List() {
         dispatch({ type: 'DELETE',payload: id})
     };
     const handleSave  = async (item) => {
-       const url = 'https://note-database.onrender.com/';
+       const url = 'https://note-database.onrender.com/checklist';
        const tempDate = new Date();
        const postData = {
         note : item?.name,
